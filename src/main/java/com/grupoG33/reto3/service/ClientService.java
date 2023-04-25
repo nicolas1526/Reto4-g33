@@ -52,4 +52,8 @@ public class ClientService {
             clientRepository.save(client);
         }
     }
+
+    public Optional<ClientModel> obtenerPorId(int id) {
+        return clientRepository.findById(id);
+    }
 }

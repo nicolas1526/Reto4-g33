@@ -9,9 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/Client")
+@CrossOrigin(value = "*")
 public class ClientController {
 
     @Autowired
@@ -21,6 +23,12 @@ public class ClientController {
     public List<ClientModel> obtener(){
         return clientService.obtener();
     }
+
+    @GetMapping("/{id}")
+    public Optional<ClientModel> obtenerPorId(@PathVariable int id){
+        return clientService.obtenerPorId(id);
+    }
+
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public void crear(@RequestBody ClientModel client){

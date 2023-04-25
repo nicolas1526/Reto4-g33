@@ -53,4 +53,8 @@ public class ReservationService {
             reservationRepository.save(reservation);
         }
     }
+
+    public Optional<ReservationModel> obtenerPorId(int id) {
+        return reservationRepository.findById(id);
+    }
 }
