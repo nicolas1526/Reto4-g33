@@ -14,7 +14,7 @@ function obtener(){
         redirect: 'follow'
     };
     
-    fetch("http://localhost/api/Message/all", requestOptions)
+    fetch("http://164.152.27.77/api/Message/all", requestOptions)
     .then(response => response.json())
     .then(result => {
         result.forEach(element => {
@@ -41,7 +41,7 @@ function obtenerPorId(id){
         redirect: 'follow'
     };
     
-    fetch(`http://localhost/api/Message/${id}`, requestOptions)
+    fetch(`http://164.152.27.77/api/Message/${id}`, requestOptions)
     .then(response => response.json())
     .then(result => {
         inputId.value = result.idMessage
@@ -58,7 +58,7 @@ function eliminar(){
         redirect: 'follow'
     };
     
-    fetch(`http://localhost/api/Message/${inputId.value}`, requestOptions)
+    fetch(`http://164.152.27.77/api/Message/${inputId.value}`, requestOptions)
     .then(response => window.location.reload())
     .catch(error => console.log('error', error));
 }
@@ -79,7 +79,7 @@ function actualizar(){
     redirect: 'follow'
     };
 
-    fetch("http://localhost/api/Message/update", requestOptions)
+    fetch("http://164.152.27.77/api/Message/update", requestOptions)
     .then(response => {
         window.location.reload()
     })
@@ -108,7 +108,7 @@ function crear(){
     redirect: 'follow'
     };
 
-    fetch("http://localhost/api/Message/save", requestOptions)
+    fetch("http://164.152.27.77/api/Message/save", requestOptions)
     .then(response => {
         window.location.reload()
     })
@@ -122,7 +122,7 @@ function obtenerCars(){
         redirect: 'follow'
     };
     
-    fetch("http://localhost/api/Car/all", requestOptions)
+    fetch("http://164.152.27.77/api/Car/all", requestOptions)
     .then(response => response.json())
     .then(result => {
         result.forEach(element => {
@@ -139,7 +139,7 @@ function obtenerClients(){
         redirect: 'follow'
     };
     
-    fetch("http://localhost/api/Client/all", requestOptions)
+    fetch("http://164.152.27.77/api/Client/all", requestOptions)
     .then(response => response.json())
     .then(result => {
         result.forEach(element => {

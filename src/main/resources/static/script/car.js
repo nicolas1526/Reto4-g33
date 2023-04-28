@@ -15,7 +15,7 @@ function obtener(){
         redirect: 'follow'
     };
     
-    fetch("http://localhost/api/Car/all", requestOptions)
+    fetch("http://164.152.27.77/api/Car/all", requestOptions)
     .then(response => response.json())
     .then(result => {
         result.forEach(element => {
@@ -44,7 +44,7 @@ function obtenerPorId(id){
         redirect: 'follow'
     };
     
-    fetch(`http://localhost/api/Car/${id}`, requestOptions)
+    fetch(`http://164.152.27.77/api/Car/${id}`, requestOptions)
     .then(response => response.json())
     .then(result => {
         inputId.value = result.idCar
@@ -63,7 +63,7 @@ function eliminar(){
         redirect: 'follow'
     };
     
-    fetch(`http://localhost/api/Car/${inputId.value}`, requestOptions)
+    fetch(`http://164.152.27.77/api/Car/${inputId.value}`, requestOptions)
     .then(response => window.location.reload())
     .catch(error => console.log('error', error));
 }
@@ -87,7 +87,7 @@ function actualizar(){
     redirect: 'follow'
     };
 
-    fetch("http://localhost/api/Car/update", requestOptions)
+    fetch("http://164.152.27.77/api/Car/update", requestOptions)
     .then(response => {
         window.location.reload()
     })
@@ -116,7 +116,7 @@ function crear(){
     redirect: 'follow'
     };
 
-    fetch("http://localhost/api/Car/save", requestOptions)
+    fetch("http://164.152.27.77/api/Car/save", requestOptions)
     .then(response => {
         window.location.reload()
     })
@@ -130,7 +130,7 @@ function obtenerGamas(){
         redirect: 'follow'
     };
     
-    fetch("http://localhost/api/Gama/all", requestOptions)
+    fetch("http://164.152.27.77/api/Gama/all", requestOptions)
     .then(response => response.json())
     .then(result => {
         result.forEach(element => {
