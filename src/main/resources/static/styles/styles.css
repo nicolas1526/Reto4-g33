@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap');
+
+*{
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace, Arial;
+    font-weight: 300;
+    font-style: italic;
+}
+
+body{
+    background-image: url("./../public/image/playa-de-isuntza-lekeitio__1280x720.jpeg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    color:blue 
+}
+
+.group-h1{
+    color: brown;
+}
+
+#titulo{
+    color: black;
+}
+
+.container-padre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.container{
+    background-color: rgba(132, 134, 134, 0.808);
+    margin: 10px 5px 20px 5px;
+    padding: 20px 25px 20px 25px;
+    border: solid salmon 3px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+
+
